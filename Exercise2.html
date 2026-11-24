@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+    // Exercise 2
+
+        class bank_Account{
+
+            #balance
+
+            constructor(acc_Holder,acc_number,balance){
+                this.acc_Holder=acc_Holder;
+                this.acc_number=acc_number;
+                this.#balance=balance;
+            }
+
+            deposit(amount){
+                this.#balance+= amount;
+
+                console.log("Credited Successfully");
+            
+            }
+
+
+            withdraw(amount){
+                if(amount< this.#balance){
+
+                    this.#balance -= amount;
+                    console.log("Debited successfully");
+                }
+                else{
+                    console.log("Ghee Khatam...........🌚"+this.#balance);
+                    
+                }
+            }
+
+              DisplayDetails(){
+                console.log("Account Holder  : "+this.acc_Holder+"\n"+
+                            "Account Number  : "+this.acc_number+"\n"+
+                            "Current Balance : "+this.#balance
+
+                )
+            }
+              }
+
+        let A1=new bank_Account("Ranveer",74563758,4400);
+
+        A1.deposit(600);
+
+
+        A1.DisplayDetails();
+
+    </script>
+    
+</body>
+</html>
