@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+// Exercise 1 
+
+        function bank_Account(acc_Holder,acc_number,balance){
+
+            this.acc_Holder = acc_Holder;
+            this.acc_number = acc_number;
+            this.balance = balance;
+
+
+
+            this.deposit=function(amount){
+                this.balance += amount;
+
+                console.log("Deopsit successfully........");
+            
+            }
+
+
+            this.withdraw=function(amount){
+
+                if(amount <= this.balance ){
+                   this.balance -= amount;    
+                }
+                else{
+                    console.log("Ghee Khatam...........🌚"+this.balance);
+                    
+                }
+
+            }
+
+            this.checkbalance = function(){
+                console.log("Current Balance : "+this.balance);
+            }
+
+            this.DisplayDetails= function(){
+                console.log("Account Holder  : "+this.acc_Holder+"\n"+
+                            "Account Number  : "+this.acc_number+"\n"+
+                            "Current Balance : "+this.balance
+
+                )
+            }
+          
+
+        }
+
+        let A1= new bank_Account("Ranveer",4576845,40000)
+
+          A1.withdraw(50000)
+          A1.DisplayDetails();
+
+        
+        
+    </script>
+</body>
+</html>
