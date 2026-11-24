@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Counter : <span id="count">0</span></h2>
+
+     <button id="minus">-</button>
+    <button id="plus">+</button>
+   
+
+    
+    <script>
+//Vairables Dec/ini
+    //var num=57;
+    //    if(num %2==0){
+    //      console.log(" Even number ");
+    //    }
+    //    else{
+    //     console.log(" Odd number");
+    //    }
+    // 
+
+
+//Looping 
+    // let n=6;
+    // let text=" "
+
+    // for(let i=0;i<n;i++)
+    // {
+
+    //         for(let j=0;j<i;j++)
+    //         {
+
+    //             text+="-*"
+    //         }
+
+    //         text+="\n";
+    // }
+    // console.log(text)
+
+
+ //Function
+ //     function greet(){
+//         let name=prompt("Enter Your Name")
+
+//         alert("Hello" +name);
+//     }
+
+//     greet();
+
+
+
+
+// DOM Document Object Model
+   let counter=0;
+
+   const count= document.querySelector("#count");
+   const plus=document.querySelector("#plus");
+    const minus=document.querySelector("#minus");
+
+
+    plus.addEventListener("click",()=>{
+        counter++;
+        count.innerHTML=counter
+    })
+
+    minus.addEventListener("click",()=>{
+
+        if(counter > 0){
+        counter--;
+        count.innerHTML=counter
+        }
+
+    })
+
+
+
+
+   
+
+
+        
+
+    </script>
+
+    
+</body>
+</html>
